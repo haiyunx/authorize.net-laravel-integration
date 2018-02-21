@@ -117,5 +117,8 @@ return [
     */
 
     'attributes' => [],
+    
+    /*Address Validation*/
+    'validation.check_address' => 'The :attribute must be validate.',
 
 ];
