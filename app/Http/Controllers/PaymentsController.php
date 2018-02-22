@@ -25,11 +25,10 @@ class PaymentsController extends Controller
     }
     public function store(Requests\CreditCardRequest $request)
     {
-            $appid = \Config::get('authorizenet.authorizenet.appid');
-            $key = \Config::get('authorizenet.authorizenet.key');
+
             $_api_context = new AnetAPI\MerchantAuthenticationType();
-            $_api_context->setName($appid);
-            $_api_context->setTransactionKey($key);
+            $_api_context->setName('8ApM3z8U');
+            $_api_context->setTransactionKey('2w347A6Qd96N4Bd6');
             $refId = 'ref' . time();
 
             // Create the payment data for a credit card
