@@ -58,6 +58,14 @@ function SetShipping(checked) {
         </div>
 <hr>
         <div class="form-group">
+            <label for="amount">Product</label>
+                    <select class="form-control" name="amount">
+                        <option value="29.95">Both - 1 year</option>
+                        <option value="51.95">Both - 2 years</option>
+                        <option value="69.95">Both - 3 years</option>
+                    </select>
+        </div>
+        <div class="form-group">
             <label for="card-number">Card Number</label>
               <input type="text" class="form-control" name="card_number" id="card-number" placeholder="Debit/Credit Card Number">
         </div>

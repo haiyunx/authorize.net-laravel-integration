@@ -12,4 +12,5 @@
 */
 
 Route::get('/', 'PaymentsController@create')->name('home');
+Route::get('/show', 'PaymentsController@show')->name('show');
 Route::resource('payments', 'PaymentsController');
