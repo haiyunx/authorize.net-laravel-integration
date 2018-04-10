@@ -41,7 +41,6 @@ function SetShipping(checked) {
     <div class="panel-body">
         @include('shared._errors')
       <form method="POST" action="{{ route('payments.store') }}">
-          {{ csrf_field() }}
         <div class="row">
             <div class="form-group col-md-6">
                 <label for="name">First Name</label>
