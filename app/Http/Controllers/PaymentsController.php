@@ -13,7 +13,7 @@ define("AUTHORIZENET_LOG_FILE", "phplog");
 
 class PaymentsController extends Controller
 {
-    
+
     public function create()
     {
         return view('payments.create');
@@ -59,7 +59,7 @@ class PaymentsController extends Controller
             $cust->setState($_POST['BillingState']);
             $cust->setCountry($_POST['BillingCountry']);
             $cust->setZip($_POST['BillingZip']);
-            $cust->setEmail("email");
+            $cust->setEmail($_POST['email']);
 
             $transactionRequestType->setBillTo($cust);
 
@@ -95,13 +95,13 @@ class PaymentsController extends Controller
             } else {
                 $message="No response returned \n";
             }
-        
+
 
         return view('shared._show')->with('message',$message);
-        
+
         return redirect()->route('show');
-        
+
     }
-    
+
 
 }

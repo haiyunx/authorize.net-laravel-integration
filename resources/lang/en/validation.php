@@ -87,7 +87,6 @@ return [
     'unique'               => 'The :attribute has already been taken.',
     'uploaded'             => 'The :attribute failed to upload.',
     'url'                  => 'The :attribute format is invalid.',
-
     /*
     |--------------------------------------------------------------------------
     | Custom Validation Language Lines
@@ -117,8 +116,5 @@ return [
     */
 
     'attributes' => [],
-    
-    /*Address Validation*/
-    'validation.check_address' => 'The :attribute must be validate.',
 
 ];
