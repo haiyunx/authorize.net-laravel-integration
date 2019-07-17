@@ -263,7 +263,7 @@ function SetShipping(checked) {
             </div>
             <div class="form-group col-md-2">
                 <label for="zip">Zip</label>
-                <input type="text" class="form-control" id="ShippingZip">
+                <input type="text" name="zip" class="form-control" id="ShippingZip">
             </div>
         </div>
         <div class="form-group">
