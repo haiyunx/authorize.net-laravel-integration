@@ -97,8 +97,7 @@ class PaymentsController extends Controller
                 $message="No response returned \n";
             }
 
-
-        print_r($message);
+        return view('payments.show')->with('message',$message);
 
     }
 
