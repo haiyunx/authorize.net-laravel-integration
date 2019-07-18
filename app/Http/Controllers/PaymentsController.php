@@ -70,7 +70,8 @@ class PaymentsController extends Controller
             $request->setTransactionRequest($transactionRequestType);
             $controller = new AnetController\CreateTransactionController($request);
             $response = $controller->executeWithApiResponse(\net\authorize\api\constants\ANetEnvironment::SANDBOX);
-                    $message=" ";
+
+            $message=" ";
             if ($response != null) {
                 if ($response->getMessages()->getResultCode() == "Ok") {
                     $tresponse = $response->getTransactionResponse();
@@ -97,9 +98,7 @@ class PaymentsController extends Controller
             }
 
 
-        return view('shared._show')->with('message',$message);
-
-        return redirect()->route('show');
+        print_r($message);
 
     }
 
