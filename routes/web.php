@@ -13,4 +13,4 @@
 
 Route::get('/', 'PaymentsController@create')->name('payments.home');
 Route::get('/show', 'PaymentsController@show')->name('payments.show');
-Route::get('/store', 'PaymentsController@store')->name('payments.store');
+Route::post('/store', 'PaymentsController@store')->name('payments.store');
