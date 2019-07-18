@@ -28,7 +28,7 @@ class PaymentsController extends Controller
 
             $_api_context = new AnetAPI\MerchantAuthenticationType();
             $_api_context->setName('8ApM3z8U');
-            $_api_context->setTransactionKey('2w347A6Qd96N4Bd6');
+            $_api_context->setTransactionKey('99ZQv29FB56n53mQ');
             $refId = 'ref' . time();
 
             // Create the payment data for a credit card
