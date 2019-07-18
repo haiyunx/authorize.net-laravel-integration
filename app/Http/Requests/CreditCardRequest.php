@@ -33,15 +33,15 @@ class CreditCardRequest extends FormRequest
             'fname' => 'required|max:30',
             'lname' => 'required|max:30',
             'email' => 'required|email|max:255',
-            'BillingAddress' => 'required|check_address',
+            'BillingAddress' => 'required',
             'BillingCity' => 'required|max:40',
             'BillingState' => 'required|max:20',
             'BillingZip' =>'required|max:20',
             'BillingCountry' => 'required|max:40'
         ];
     }
-    
-    
+
+
     public function authorize()
     {
 
