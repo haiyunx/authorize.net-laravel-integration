@@ -58,6 +58,7 @@ class PaymentsController extends Controller
             $cust->setZip($_POST['BillingZip']);
             $customerData = new AnetAPI\CustomerDataType();
             $customerData->setType("individual");
+            $customerData->setId(time());
             $customerData->setEmail($_POST['email']);
 
             $transactionRequestType->setBillTo($cust);
