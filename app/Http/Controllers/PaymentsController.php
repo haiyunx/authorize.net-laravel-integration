@@ -61,7 +61,7 @@ class PaymentsController extends Controller
 
             $customerData = new AnetAPI\CustomerDataType();
             $customerData->setType("individual");
-            $customerData->setId(time());
+            $customerData->setId("");
             $customerData->setEmail($_POST['email']);
 
             $transactionRequestType->setCustomer($customerData);
