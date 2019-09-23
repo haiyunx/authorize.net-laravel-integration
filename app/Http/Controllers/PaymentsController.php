@@ -56,12 +56,14 @@ class PaymentsController extends Controller
             $cust->setState($_POST['BillingState']);
             $cust->setCountry($_POST['BillingCountry']);
             $cust->setZip($_POST['BillingZip']);
+
+            $transactionRequestType->setBillTo($cust);
+
             $customerData = new AnetAPI\CustomerDataType();
             $customerData->setType("individual");
             $customerData->setId(time());
             $customerData->setEmail($_POST['email']);
 
-            $transactionRequestType->setBillTo($cust);
             $transactionRequestType->setCustomer($customerData);
 
             $request = new AnetAPI\CreateTransactionRequest();
