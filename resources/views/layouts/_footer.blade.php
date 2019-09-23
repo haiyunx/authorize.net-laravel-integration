@@ -1,11 +1,11 @@
 <div class="col-md-12">
     <footer class="footer">
         <small class="slogon">
-            <a>Wine &amp; Spirits Magazine</a>
+            <a>HaiyunX</a>
         </small>
         <nav>
             <ul>
-                <li><a href="#">About</a></li>
+                <li><a href="https://github.com/haiyunx">Github</a></li>
             </ul>
         </nav>
     </footer>

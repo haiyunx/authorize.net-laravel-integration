@@ -1,11 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
 use App\Http\Requests;
-
-
 use net\authorize\api\contract\v1 as AnetAPI;
 use net\authorize\api\controller as AnetController;
 
@@ -27,8 +24,8 @@ class PaymentsController extends Controller
     {
 
             $_api_context = new AnetAPI\MerchantAuthenticationType();
-            $_api_context->setName('8ApM3z8U');
-            $_api_context->setTransactionKey('99ZQv29FB56n53mQ');
+            $_api_context->setName(getenv("ANET_NAME"));
+            $_api_context->setTransactionKey(getenv("ANET_TRANS_KEY"));
             $refId = 'ref' . time();
 
             // Create the payment data for a credit card
@@ -71,7 +68,7 @@ class PaymentsController extends Controller
             $controller = new AnetController\CreateTransactionController($request);
             $response = $controller->executeWithApiResponse(\net\authorize\api\constants\ANetEnvironment::SANDBOX);
 
-            $message=" ";
+            $message="Your test payment is processed. Please check your mailbox for the receipt.";
             if ($response != null) {
                 if ($response->getMessages()->getResultCode() == "Ok") {
                     $tresponse = $response->getTransactionResponse();
