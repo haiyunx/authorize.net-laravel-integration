@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>@yield('title','Sample App') - Helena's Test Website</title>
+  <title>@yield('title','Sample App') - HaiyunX</title>
     <link rel="stylesheet" href="/css/app.css">
     @yield('jsdoc')
 </head>

@@ -39,9 +39,10 @@
             <h5>Payment Form</h5>
         </div>
         <div class="panel-body">
-          <p>This is a demonstration on integrating Authorize.net payment gateway with laravel v5.5. <br>
+          <p>This is a demonstration on integrating Authorize.net payment gateway with laravel v5.5. Check out <a href="https://developer.authorize.net/hello_world/testing_guide/">Testing Guide</a><br>
           You will receice a receipt after the test payment is processed.
           <br><i>Note: Form vaidation is enabled.</i><p>
+          <hr>
             @include('shared._errors')
             <form method="POST" action="{{ route('payments.store') }}">
                 <div class="row">
