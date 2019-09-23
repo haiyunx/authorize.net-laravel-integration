@@ -69,6 +69,7 @@ class PaymentsController extends Controller
             $request = new AnetAPI\CreateTransactionRequest();
             $request->setMerchantAuthentication($_api_context);
             $request->setRefId($refId);
+            $request->setTransactionRequest($transactionRequestType);
             $controller = new AnetController\CreateTransactionController($request);
             $response = $controller->executeWithApiResponse(\net\authorize\api\constants\ANetEnvironment::SANDBOX);
 
