@@ -61,13 +61,11 @@ class PaymentsController extends Controller
             $customerData->setEmail($_POST['email']);
 
             $transactionRequestType->setBillTo($cust);
-
+            $transactionRequestType->setCustomer($customerData);
 
             $request = new AnetAPI\CreateTransactionRequest();
             $request->setMerchantAuthentication($_api_context);
             $request->setRefId($refId);
-            $request->setTransactionRequest($transactionRequestType);
-            $request->setCustomer($customerData);
             $controller = new AnetController\CreateTransactionController($request);
             $response = $controller->executeWithApiResponse(\net\authorize\api\constants\ANetEnvironment::SANDBOX);
 
